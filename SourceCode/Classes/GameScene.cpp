@@ -443,19 +443,23 @@ bool GameScene::isValidMove(int toX, int toY)
 	{
 		int count = 0;
 		for (int i = allChessman[black_king_id]->m_x + 1; i < allChessman[red_king_id]->m_x; ++i)
+		{
 			if (map[i][toY] != NOCHESS)
 				count++;
+		}
 
 		if (count == 0)
 			return false;
 	}
-	// 将军本在同列，中间只剩一子，并且将要移开，造成将军见面
+	// 将军本在同列，中间只剩一子，并且该子将要移开，造成将军见面
 	if (allChessman[black_king_id]->m_y == allChessman[red_king_id]->m_y)
 	{
 		int count = 0;
 		for (int i = allChessman[black_king_id]->m_x + 1; i < allChessman[red_king_id]->m_x; ++i)
+		{
 			if (map[i][allChessman[black_king_id]->m_y] != NOCHESS)
 				count++;
+		}
 
 		// 中间只有 1 子相隔,并且这 1 子将要移开，则非法
 		if (count == 1 && fromY == allChessman[black_king_id]->m_y && toY != allChessman[black_king_id]->m_y)

@@ -17,6 +17,6 @@
 
 **截图：**
 
-![中国象棋](/ChineseChess_LAN.PNG)
+![中国象棋](/ChineseChess_LAN.png)
 
 来自 **[CodeLadyJJY](http://www.codelady.space)**
